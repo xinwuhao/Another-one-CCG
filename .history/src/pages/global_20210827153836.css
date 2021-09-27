@@ -1,0 +1,15 @@
+html,
+body,
+#root,
+.ant-layout {
+    height: 100%;
+
+}
+
+.box {
+    display: none;
+}
+
+.enter:hover {
+    display: block;
+}

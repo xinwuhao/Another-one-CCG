@@ -1,0 +1,27 @@
+html,
+body,
+#root,
+.ant-layout {
+    height: 100%;
+
+}
+
+.box {
+    position: absolute;
+    display: flex;
+    left: 30px;
+    bottom: 23px;
+    width: 90%;
+    background-color: rgb(55, 100, 20);
+}
+
+.box1 {
+    // display: none;
+    background-color: blue !important;
+}
+
+.box:hover {
+    .box1 {
+        display: block;
+    }
+}

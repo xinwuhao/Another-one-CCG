@@ -1,0 +1,25 @@
+html,
+body,
+#root,
+.ant-layout {
+    height: 100%;
+
+}
+
+.box {
+    position: absolute !important;
+    display: flex;
+    left: 30px !important;
+    bottom: 23px !important;
+    width: 90%;
+}
+
+.box1 {
+    display: none;
+}
+
+.box:hover {
+    .box1 {
+        display: block;
+    }
+}

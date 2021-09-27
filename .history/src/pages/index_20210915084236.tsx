@@ -1,0 +1,64 @@
+import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'umi'
+
+const Index = () => {
+  let topics = useSelector((state: any) => state.home.topics)
+  let dispatch = useDispatch()
+  let obtain = () => {
+    dispatch(({
+      type: 'home/getIndex',
+      payload: {}
+    }))
+  }
+  //进入执行
+  useEffect(() => {
+    obtain()
+  }, [])
+  return (
+    <div style={{ backgroundColor: '#ffffff', width: '100%', padding: 20, height: '100vh' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <div style={{
+          width: '30%',
+          height: 100,
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#FF4500',
+          padding: 20
+        }}>
+          <div>
+            <div>{topics.orderCount}</div>
+            <div>订单总数</div>
+          </div>
+        </div>
+        <div style={{
+          width: '30%',
+          height: 100,
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#00FF7F',
+          padding: 20
+        }}>
+          <div>
+            <div>{topics.goodsCount}</div>
+            <div>商品总数</div>
+          </div>
+        </div>
+        <div style={{
+          width: '30%',
+          height: 100,
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#2F4F4F',
+          padding: 20
+        }}>
+          <div>
+            <div style={{ color: '#fffffff' }}>{topics.userCount}</div>
+            <div>用户总数</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Index

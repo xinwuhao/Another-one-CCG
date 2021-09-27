@@ -1,0 +1,9 @@
+html,
+body,
+#root,
+element.style,
+.ant-layout {
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
